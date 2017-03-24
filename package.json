@@ -1,0 +1,25 @@
+{
+  "name": "simple-electron-todo",
+  "version": "0.0.1",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "build --dir",
+    "dist": "build"
+  },
+  "keywords": [
+    "Electron"
+  ],
+  "build": {
+    "appId": "com.kesuskim.simple-electron-todo"
+  },
+  "author": "Kesus Kim",
+  "devDependencies": {
+    "electron": "^1.6.2",
+    "electron-builder": "^13.5.0"
+  },
+  "dependencies": {
+    "vue": "^2.2.4"
+  }
+}
