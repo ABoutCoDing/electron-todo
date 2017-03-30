@@ -1,4 +1,4 @@
-# Simple Electron Todo
+# Electron Todo
 
 간단하게 Electron을 시작할 수 있는 Todo 샘플 어플리케이션입니다.
 

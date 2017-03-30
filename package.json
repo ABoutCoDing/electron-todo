@@ -1,5 +1,5 @@
 {
-  "name": "simple-electron-todo",
+  "name": "electron-todo",
   "version": "0.0.1",
   "description": "A minimal Electron application",
   "main": "main.js",
@@ -12,7 +12,7 @@
     "Electron"
   ],
   "build": {
-    "appId": "com.kesuskim.simple-electron-todo"
+    "appId": "com.kesuskim.electron-todo"
   },
   "author": "Kesus Kim",
   "devDependencies": {
