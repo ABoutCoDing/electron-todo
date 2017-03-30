@@ -26,7 +26,7 @@
             <div class="view">
               <input class="toggle" type="checkbox" v-model="todo.completed">
               <label @dblclick="editTodo(todo)">{{ todo.title }}</label>
-              <button class="destroy" @click="removeTodo(todo)"></button>
+              <button class="destroy" @click="removeTodoConfirm(todo)"></button>
             </div>
             <input class="edit" type="text"
               v-model="todo.title"

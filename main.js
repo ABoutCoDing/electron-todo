@@ -41,7 +41,7 @@ ipcMain.on('del-confirmation', (event, todo) => {
     type: 'none',
     buttons: ['취소', '삭제'],
     title: '삭제 확인!',
-    message: `정말 항목 ${todo.title} 을 지울거에요??`
+    message: `정말 ${todo.title} 을 지울거에요??`
   });
   if (isDelete === 1) {
     event.sender.send('del-confirmation', todo);

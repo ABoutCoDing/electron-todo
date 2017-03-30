@@ -99,8 +99,12 @@ var app = new Vue({
       this.newTodo = ''
     },
 
-    removeTodo: function (todo) {
+    removeTodoConfirm: function (todo) {
       ipcRenderer.send('del-confirmation', todo);
+    },
+
+    removeTodo: function (delTodo) {
+      this.todos.splice(this.todos.indexOf(this.todos.filter( item => item.id == delTodo.id )[0]), 1);
     },
 
     editTodo: function (todo) {
@@ -156,11 +160,8 @@ window.addEventListener('hashchange', onHashChange)
 onHashChange()
 
 ipcRenderer.on('del-confirmation', (event, delTodo) => {
-  console.log(app._data.todos.indexOf(delTodo));
-  app._data.todos.splice(app._data.todos.indexOf(delTodo), 1);
+  app.removeTodo(delTodo);
 });
 
 // mount
 app.$mount('.todoapp')
-
-// indexOf 함수가 제대로 동작 안함, 확인해보기 (-1 반환)
